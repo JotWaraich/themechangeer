@@ -1,0 +1,18 @@
+﻿@page "/"
+@inject ThemeChanger ThemeChanger
+
+<h3>Change Theme</h3>
+<button @onclick="ChangeToDarkTheme">Change to Dark Theme</button>
+<button @onclick="ChangeToLightTheme">Change to Light Theme</button>
+
+@code {
+    private void ChangeToDarkTheme()
+    {
+        ThemeChanger.ChangeTheme(false);
+    }
+
+    private void ChangeToLightTheme()
+    {
+        ThemeChanger.ChangeTheme(true);
+    }
+}
